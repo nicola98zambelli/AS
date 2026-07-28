@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<!--
+  DIRECTION CONTRACT — Antichi Sapori (Persuade / vetrina one-page) — rev. tenue
+  THESIS: Trattoria tipica bergamasca resa con eleganza sobria — tortora, calce, legno, ardesia —
+    niente colori-fuoco. Il gallo del logo è il filo conduttore; il menù del giorno vive su una
+    lavagna di gesso, com'è nella realtà. Un solo gesto: chiamare.
+  OWN-WORLD: palette tenue (tortora/calce/carbone caldo/legno noce); accento discreto, nessun bagliore.
+    Lavagna in ardesia scura scritta a gesso bianco (Caveat). Emblema del gallo ricorrente.
+    Type: Zilla Slab (insegna) + Spectral (testo) + Caveat (gesso).
+  STORY: il visitatore riconosce una vera trattoria bergamasca — pranzo di casa a 12€, casoncelli,
+    territorio, la voce dei clienti — e fa una cosa sola: telefona e prenota.
+  FIRST VIEWPORT: la sala vera (arco di mattoni, pietra, stufa) con velo caldo tenue; targa col gallo
+    e ANTICHI SAPORI; una promessa in una riga; un bottone-chiamata calmo. Nessun'altra azione.
+  FORM: camera del focolare, registro tenue. Nessun concept-seed (ambiente senza Node); scelta dichiarata.
+  FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
+-->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Antichi Sapori — Trattoria tipica bergamasca</title>
+<meta name="description" content="Cuciniamo come nelle cascine della bergamasca: poche materie prime, quelle giuste, e il tempo che ci vuole. Ricette di famiglia, stagioni rispettate, niente fretta. La stessa tavola di sempre, per chi ha voglia di sedersi davvero." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;500;600;700&family=Spectral:ital,wght@0,300;0,400;0,500;1,400&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<a class="skip-link" href="#chiama">Salta alla chiamata</a>
+
+<!-- barra minima: solo emblema + unica azione -->
+<header class="topbar">
+  <a class="brand" href="#top" aria-label="Antichi Sapori — home">
+    <img class="brand__mark" src="asset/logo.jpg" alt="" width="52" height="52" />
+    <span class="brand__text">
+      <span class="brand__name">Antichi Sapori</span>
+      <span class="brand__tag">Trattoria tipica bergamasca</span>
+    </span>
+  </a>
+  <a class="topbar__call" href="tel:+39035000000">
+    <svg class="topbar__call-ico" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    <span>035 000 000</span>
+  </a>
+</header>
+
+<main id="top">
+
+  <!-- HERO: la sala vera, velo caldo tenue -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero__grain" aria-hidden="true"></div>
+    <div class="hero__inner">
+      <h1 id="hero-title" class="hero__title">La cucina di una volta,<br />a due passi da Bergamo.</h1>
+      <p class="hero__lead">
+        Cuciniamo come nelle cascine della bergamasca: poche materie prime, quelle giuste, e il tempo che ci vuole. Ricette di famiglia, stagioni rispettate, niente fretta. La stessa tavola di sempre, per chi ha voglia di sedersi davvero.
+      </p>
+      <div class="hero__actions">
+        <a class="btn-call" href="tel:+39035000000">
+          <svg class="btn-call__ico" aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span class="btn-call__label">Chiama e prenota</span>
+          <span class="btn-call__num">035 000 000</span>
+        </a>
+        <p class="hero__hint">Si consiglia la prenotazione</p>
+      </div>
+    </div>
+    <div class="hero__scroll" aria-hidden="true"><span></span></div>
+  </section>
+
+  <!-- PRANZO: la lavagna del giorno -->
+  <section class="pranzo" aria-labelledby="pranzo-title">
+    <div class="wrap">
+      <div class="chalkboard">
+        <div class="chalkboard__surface">
+          <p class="chalk-sub">Menù del giorno &middot; Lun&ndash;Sab a mezzogiorno</p>
+          <h2 id="pranzo-title" class="chalk-title">Il pranzo di casa</h2>
+          <p class="chalk-price">&euro;12</p>
+          <p class="chalk-allin">tutto compreso</p>
+          <ul class="chalk-list" role="list">
+            <li>Primo a scelta</li>
+            <li>Secondo a scelta</li>
+            <li>Piccolo dolce</li>
+          </ul>
+          <p class="chalk-note">coperto &middot; acqua &middot; un quartino di vino &middot; caff&egrave;</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PIATTI -->
+  <section class="piatti" aria-labelledby="piatti-title">
+    <div class="wrap">
+      <header class="piatti__head">
+        <h2 id="piatti-title" class="section-title section-title--light">Dalla nostra cucina</h2>
+        <p class="section-lead section-lead--light">Piatti del territorio, materie prime di stagione. Le proposte cambiano con la stagione e con l'annata, ma i grandi classici ci saranno sempre...</p>
+      </header>
+
+      <ul class="dishes" role="list">
+        <li class="dish dish--feature">
+          <figure>
+            <div class="dish__img"><img src="asset/antichi-sapori1.jpg" alt="Casoncelli alla bergamasca conditi con burro fuso, pancetta croccante e salvia" loading="lazy" /></div>
+            <figcaption>
+              <h3 class="dish__name">Casoncelli alla bergamasca</h3>
+              <p class="dish__desc">La pasta fresca ripiena simbolo della citt&agrave;, burro fuso, pancetta formaggio e salvia.</p>
+            </figcaption>
+          </figure>
+        </li>
+
+        <li class="dish dish--wide">
+          <figure>
+            <div class="dish__img"><img src="asset/antichi-sapori8.jpg" alt="Tagliere di legno con salumi nostrani, polentina, funghi ripieni e salsiccia" loading="lazy" /></div>
+            <figcaption>
+              <h3 class="dish__name">Il tagliere della tradizione</h3>
+              <p class="dish__desc">Salumi nostrani, polentina calda, salsiccia e stuzzichini di stagione. Da dividere, per cominciare al meglio.</p>
+            </figcaption>
+          </figure>
+        </li>
+
+        <li class="dish">
+          <figure>
+            <div class="dish__img"><img src="asset/antichi-sapori.jpg" alt="Gnocchi morbidi in crema di formaggi di malga con prezzemolo" loading="lazy" /></div>
+            <figcaption>
+              <h3 class="dish__name">Gnocchi panna e porcini</h3>
+              <p class="dish__desc">Gnocchi morbidi avvolti in una crema di panna, funghi porcini e prezzemolo fresco.</p>
+            </figcaption>
+          </figure>
+        </li>
+
+        <li class="dish">
+          <figure>
+            <div class="dish__img"><img src="asset/antichi-sapori2.jpg" alt="Fagottini di pasta fresca in crema di Grana con bocconcini" loading="lazy" /></div>
+            <figcaption>
+              <h3 class="dish__name">Ravioli Taleggio e Fichi</h3>
+              <p class="dish__desc">Pasta ripiena in una delicata crema di Taleggio e Fichi.</p>
+            </figcaption>
+          </figure>
+        </li>
+
+        <li class="dish">
+          <figure>
+            <div class="dish__img"><img src="asset/antichi-sapori4.jpg" alt="Coniglio della cascina brasato servito su anelli di polenta" loading="lazy" /></div>
+            <figcaption>
+              <h3 class="dish__name">Coniglio alla bergamasca con polenta</h3>
+              <p class="dish__desc">Coniglio nostrano a lenta cottura, adagiato su un letto di polenta rustica.</p>
+            </figcaption>
+          </figure>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- TERRITORIO -->
+  <section class="territorio" aria-labelledby="terr-title">
+    <div class="wrap wrap--narrow">
+      <h2 id="terr-title" class="section-title">Il gusto delle nostre valli</h2>
+      <p class="section-lead">
+        Bergamo &egrave; la <em>Cheese Valley</em>: nessun'altra terra d'Italia conta cos&igrave; tanti
+        formaggi a Denominazione di Origine Protetta. Sulla nostra tavola arrivano ogni giorno,
+        insieme alla polenta taragna e ai vini di queste colline.
+      </p>
+
+      <div class="territorio__cols">
+        <div class="territorio__col">
+          <h3 class="mini-title">Nove formaggi DOP</h3>
+          <ul class="carved" role="list">
+            <li>Formai de Mut</li>
+            <li>Taleggio</li>
+            <li>Bitto</li>
+            <li>Strachitunt</li>
+            <li>Gorgonzola</li>
+            <li>Quartirolo Lombardo</li>
+            <li>Grana Padano</li>
+            <li>Provolone Valpadana</li>
+            <li>Salva Cremasco</li>
+          </ul>
+        </div>
+        <div class="territorio__col">
+          <h3 class="mini-title">Dalla cantina</h3>
+          <ul class="carved" role="list">
+            <li>Valcalepio Rosso DOC</li>
+            <li>Valcalepio Bianco DOC</li>
+            <li>Moscato di Scanzo DOCG</li>
+            <li>Grappe e amari di casa</li>
+          </ul>
+          <p class="territorio__note">Polenta taragna di mais e grano saraceno, mantecata al Branzi: il piatto che scalda l'inverno.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECENSIONI: "cosa dicono di noi"
+       ATTENZIONE: testi placeholder di esempio per mostrare il layout.
+       Sostituire con recensioni reali di Google / Tripadvisor prima di pubblicare. -->
+  <section class="reviews" aria-labelledby="rev-title">
+    <img class="reviews__mark" src="asset/logo.jpg" alt="" aria-hidden="true" />
+    <div class="wrap">
+      <h2 id="rev-title" class="section-title section-title--on-light">Cosa dicono di noi</h2>
+      <ul class="reviews__grid" role="list">
+        <li class="review">
+          <div class="review__stars" role="img" aria-label="Cinque stelle su cinque">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote class="review__quote">Casoncelli come quelli della nonna e una sala d'altri tempi, con i mattoni e la stufa. Conto onestissimo, torneremo di sicuro.</blockquote>
+          <p class="review__meta"><cite>Marco B.</cite><span class="review__src">Google</span></p>
+        </li>
+        <li class="review">
+          <div class="review__stars" role="img" aria-label="Cinque stelle su cinque">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote class="review__quote">Il pranzo a 12 euro &egrave; imbattibile: primo, secondo, dolce, vino e caff&egrave;. Tutto genuino, servizio veloce e gentile.</blockquote>
+          <p class="review__meta"><cite>Giulia R.</cite><span class="review__src">Tripadvisor</span></p>
+        </li>
+        <li class="review">
+          <div class="review__stars" role="img" aria-label="Cinque stelle su cinque">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote class="review__quote">Posto autentico, accoglienza vera. Il coniglio con la polenta &egrave; da leccarsi i baffi. Una delle poche osterie rimaste cos&igrave;.</blockquote>
+          <p class="review__meta"><cite>Andrea T.</cite><span class="review__src">Google</span></p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CHIUSURA + CHIAMATA -->
+  <section class="casa" id="chiama" aria-labelledby="casa-title">
+    <div class="wrap wrap--narrow casa__inner">
+      <img class="casa__seal" src="asset/logo.jpg" alt="" width="96" height="96" />
+      <h2 id="casa-title" class="casa__title">Vi aspettiamo a tavola</h2>
+      <p class="casa__lead">Si consiglia la prenotazione.</p>
+
+      <a class="btn-call btn-call--lg" href="tel:+39035000000">
+        <svg class="btn-call__ico" aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span class="btn-call__label">Chiama e prenota</span>
+        <span class="btn-call__num">035 000 000</span>
+      </a>
+
+      <dl class="casa__info">
+        <div class="casa__info-item">
+          <dt>Dove</dt>
+          <dd>Via del Borgo, 00<br />24100 Bergamo (BG)</dd>
+        </div>
+        <div class="casa__info-item">
+          <dt>A pranzo</dt>
+          <dd>Luned&igrave; &ndash; Sabato<br />12:00&ndash;14:30</dd>
+        </div>
+        <div class="casa__info-item">
+          <dt>A cena</dt>
+          <dd>Su prenotazione<br />chiamateci</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__inner">
+    <div class="foot__brand">
+      <img src="asset/logo.jpg" alt="" width="44" height="44" />
+      <span>
+        <strong>Antichi Sapori</strong>
+        <em>Trattoria tipica bergamasca</em>
+      </span>
+    </div>
+    <p class="foot__meta">
+      Bergamo &middot; <a href="tel:+39035000000">035 000 000</a><br />
+      <a class="foot__reviews" href="https://www.google.com/search?sa=X&amp;sca_esv=48859e6e254d7cae&amp;q=Antichi+Sapori+Reviews&amp;rflfq=1&amp;num=20&amp;stick=H4sIAAAAAAAAAONgkxK2sDQ2NzA1tDS1tDQ0tzA3MrQ03sDI-IpRzDGvJDM5I1MhOLEgvyhTISi1LDO1vHgRKw4JAAXYFhVMAAAA&amp;rldimm=8937051959917872193&amp;tbm=lcl&amp;hl=en-IT#lkt=LocalPoiReviews" target="_blank" rel="noopener">Leggi le recensioni su Google</a><br />
+      <span>&copy; 2026 Antichi Sapori</span>
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
