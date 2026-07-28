@@ -23,6 +23,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;500;600;700&family=Spectral:ital,wght@0,300;0,400;0,500;1,400&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet" />
+<link rel="icon" type="image/png" href="asset/logo_main.png" />
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -31,7 +32,7 @@
 <!-- barra minima: solo emblema + unica azione -->
 <header class="topbar">
   <a class="brand" href="#top" aria-label="Antichi Sapori — home">
-    <img class="brand__mark" src="asset/logo.jpg" alt="" width="52" height="52" />
+    <img class="brand__mark" src="asset/logo_main.png" alt="" width="52" height="52" />
     <span class="brand__text">
       <span class="brand__name">Antichi Sapori</span>
       <span class="brand__tag">Trattoria tipica bergamasca</span>
@@ -51,7 +52,7 @@
     <div class="hero__inner">
       <h1 id="hero-title" class="hero__title">La cucina di una volta,<br />a due passi da Bergamo.</h1>
       <p class="hero__lead">
-        Cuciniamo come nelle cascine della bergamasca: poche materie prime, quelle giuste, e il tempo che ci vuole. Ricette di famiglia, stagioni rispettate, niente fretta. La stessa tavola di sempre, per chi ha voglia di sedersi davvero.
+      Proponiamo una cucina tradizionale bergamasca, fatta di poche materie prime, scelte con cura tra le realtà del territorio, ricette di famiglia e stagioni rispettate.
       </p>
       <div class="hero__actions">
         <a class="btn-call" href="tel:+39035000000">
@@ -62,29 +63,11 @@
         <p class="hero__hint">Si consiglia la prenotazione</p>
       </div>
     </div>
-    <div class="hero__scroll" aria-hidden="true"><span></span></div>
-  </section>
-
-  <!-- PRANZO: la lavagna del giorno -->
-  <section class="pranzo" aria-labelledby="pranzo-title">
-    <div class="wrap">
-      <div class="chalkboard">
-        <div class="chalkboard__surface">
-          <p class="chalk-sub">Menù del giorno &middot; Lun&ndash;Sab a mezzogiorno</p>
-          <h2 id="pranzo-title" class="chalk-title">Il pranzo di casa</h2>
-          <p class="chalk-price">&euro;12</p>
-          <p class="chalk-allin">tutto compreso</p>
-          <ul class="chalk-list" role="list">
-            <li>Primo a scelta</li>
-            <li>Secondo a scelta</li>
-            <li>Piccolo dolce</li>
-          </ul>
-          <p class="chalk-note">coperto &middot; acqua &middot; un quartino di vino &middot; caff&egrave;</p>
-        </div>
-      </div>
+    <div class="hero__scroll hero__scroll--mouse" aria-hidden="true"><span></span></div>
+    <div class="hero__scroll hero__scroll--touch" aria-hidden="true">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
     </div>
   </section>
-
 
   <!-- PIATTI -->
   <section class="piatti" aria-labelledby="piatti-title">
@@ -148,6 +131,35 @@
     </div>
   </section>
 
+  <!-- PRANZO: la lavagna del giorno + racconto -->
+  <section class="pranzo" aria-labelledby="pranzo-title">
+    <div class="wrap pranzo__inner">
+      <div class="chalkboard">
+        <img class="chalkboard__img" src="asset/board.png" alt="" aria-hidden="true" />
+        <div class="chalkboard__text">
+          <p class="chalk-sub">Men&ugrave; del giorno &middot; Lun&ndash;Sab a mezzogiorno</p>
+          <h2 class="chalk-title">Il pranzo di casa</h2>
+          <p class="chalk-price">&euro;12</p>
+          <p class="chalk-allin">tutto compreso</p>
+          <ul class="chalk-list" role="list">
+            <li>Primo a scelta</li>
+            <li>Secondo a scelta</li>
+            <li>Piccolo dolce</li>
+          </ul>
+          <p class="chalk-note">coperto &middot; acqua &middot; un quartino di vino &middot; caff&egrave;</p>
+        </div>
+      </div>
+
+      <div class="pranzo__story">
+        <p class="mini-title pranzo__eyebrow">A mezzogiorno</p>
+        <h2 id="pranzo-title" class="section-title section-title--on-light">Fermarsi a pranzo, come una volta</h2>
+        <p class="pranzo__lead">Ogni giorno, da luned&igrave; a sabato, prepariamo un pranzo completo: un primo, un secondo e un piccolo dolce, con l'acqua, un quartino di vino e il caff&egrave;. Nessuna carta lunga da studiare, solo quello che offre la stagione.</p>
+        <p class="pranzo__lead">&Egrave; il pasto di chi lavora e di chi ha voglia di essere coccolato, senza spendere una fortuna. Dodici euro, tutto compreso.</p>
+      </div>
+    </div>
+  </section>
+
+  
   <!-- TERRITORIO -->
   <section class="territorio" aria-labelledby="terr-title">
     <div class="wrap wrap--narrow">
@@ -160,17 +172,13 @@
 
       <div class="territorio__cols">
         <div class="territorio__col">
-          <h3 class="mini-title">Nove formaggi DOP</h3>
+          <h3 class="mini-title">formaggi DOP</h3>
           <ul class="carved" role="list">
             <li>Formai de Mut</li>
             <li>Taleggio</li>
             <li>Bitto</li>
             <li>Strachitunt</li>
-            <li>Gorgonzola</li>
-            <li>Quartirolo Lombardo</li>
-            <li>Grana Padano</li>
-            <li>Provolone Valpadana</li>
-            <li>Salva Cremasco</li>
+
           </ul>
         </div>
         <div class="territorio__col">
@@ -181,34 +189,73 @@
             <li>Moscato di Scanzo DOCG</li>
             <li>Grappe e amari di casa</li>
           </ul>
-          <p class="territorio__note">Polenta taragna di mais e grano saraceno, mantecata al Branzi: il piatto che scalda l'inverno.</p>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- RECENSIONI: "cosa dicono di noi"
-       ATTENZIONE: testi placeholder di esempio per mostrare il layout.
-       Sostituire con recensioni reali di Google / Tripadvisor prima di pubblicare. -->
+  
+  <!-- RECENSIONI: punteggi piattaforme + recensioni reali -->
   <section class="reviews" aria-labelledby="rev-title">
-    <img class="reviews__mark" src="asset/logo.jpg" alt="" aria-hidden="true" />
+    <img class="reviews__mark" src="asset/logo_main.png" alt="" aria-hidden="true" />
     <div class="wrap">
       <h2 id="rev-title" class="section-title section-title--on-light">Cosa dicono di noi</h2>
+
+      <!-- Punteggi piattaforme -->
+      <ul class="platforms" role="list">
+        <li class="platform">
+          <svg class="platform__logo" aria-label="Tripadvisor" width="32" height="32" viewBox="0 0 32 32"><circle cx="10" cy="18" r="5" fill="none" stroke="#00aa6c" stroke-width="2"/><circle cx="22" cy="18" r="5" fill="none" stroke="#00aa6c" stroke-width="2"/><circle cx="10" cy="18" r="2" fill="#00aa6c"/><circle cx="22" cy="18" r="2" fill="#00aa6c"/><path d="M5 13c3-3 7-4 11-4s8 1 11 4" fill="none" stroke="#00aa6c" stroke-width="2" stroke-linecap="round"/><path d="M14 8l2-3 2 3" fill="#00aa6c"/></svg>
+          <span class="platform__score">4.6</span>
+          <svg class="platform__stars" aria-label="4.6 su 5" width="90" height="18" viewBox="0 0 90 18"><defs><linearGradient id="fill46"><stop offset="92%" stop-color="#b39a6a"/><stop offset="92%" stop-color="#ddd"/></linearGradient></defs><text font-size="17" y="15" fill="url(#fill46)">★★★★★</text></svg>
+          <span class="platform__name">Tripadvisor</span>
+        </li>
+        <li class="platform">
+          <svg class="platform__logo" aria-label="Google" width="32" height="32" viewBox="0 0 48 48"><path fill="#4285F4" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#34A853" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59A14.5 14.5 0 019.5 24c0-1.59.28-3.14.76-4.59l-7.98-6.19A23.99 23.99 0 000 24c0 3.77.9 7.34 2.44 10.51l8.09-5.92z"/><path fill="#EA4335" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-8.09 5.92C6.51 42.62 14.62 48 24 48z"/></svg>
+          <span class="platform__score">4.5</span>
+          <svg class="platform__stars" aria-label="4.5 su 5" width="90" height="18" viewBox="0 0 90 18"><defs><linearGradient id="fill45"><stop offset="90%" stop-color="#b39a6a"/><stop offset="90%" stop-color="#ddd"/></linearGradient></defs><text font-size="17" y="15" fill="url(#fill45)">★★★★★</text></svg>
+          <span class="platform__name">Google</span>
+        </li>
+        <li class="platform">
+          <svg class="platform__logo" aria-label="Facebook" width="32" height="32" viewBox="0 0 32 32"><circle cx="16" cy="16" r="16" fill="#1877F2"/><path fill="#fff" d="M22 11h-3c-.5 0-1 .5-1 1v3h4l-.5 4H18v9h-4v-9h-3v-4h3v-3.5C14 8.5 16.5 6 19.5 6H22v5z"/></svg>
+          <span class="platform__score">4.7</span>
+          <svg class="platform__stars" aria-label="4.7 su 5" width="90" height="18" viewBox="0 0 90 18"><defs><linearGradient id="fill47"><stop offset="94%" stop-color="#b39a6a"/><stop offset="94%" stop-color="#ddd"/></linearGradient></defs><text font-size="17" y="15" fill="url(#fill47)">★★★★★</text></svg>
+          <span class="platform__name">Facebook</span>
+        </li>
+      </ul>
+
+      <!-- Recensioni reali -->
       <ul class="reviews__grid" role="list">
         <li class="review">
-          <div class="review__stars" role="img" aria-label="Cinque stelle su cinque">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <blockquote class="review__quote">Casoncelli come quelli della nonna e una sala d'altri tempi, con i mattoni e la stufa. Conto onestissimo, torneremo di sicuro.</blockquote>
-          <p class="review__meta"><cite>Marco B.</cite><span class="review__src">Google</span></p>
+          <div class="review__header">
+            <div class="review__stars" role="img" aria-label="Cinque stelle su cinque">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <cite class="review__name">Ittolino</cite>
+          </div>
+          <blockquote class="review__quote">Proprio la trattoria che cerco nei miei viaggi, semplice, personale cordiale e con piatti tipici. Abbiamo mangiato benissimo spendendo il giusto.</blockquote>
+          <p class="review__foot">
+            <span class="review__detail">Cuneo, Italia &middot; 344 contributi</span>
+            <span class="review__src"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 32 32"><circle cx="10" cy="18" r="5" fill="none" stroke="#00aa6c" stroke-width="2"/><circle cx="22" cy="18" r="5" fill="none" stroke="#00aa6c" stroke-width="2"/><circle cx="10" cy="18" r="2" fill="#00aa6c"/><circle cx="22" cy="18" r="2" fill="#00aa6c"/><path d="M5 13c3-3 7-4 11-4s8 1 11 4" fill="none" stroke="#00aa6c" stroke-width="2" stroke-linecap="round"/><path d="M14 8l2-3 2 3" fill="#00aa6c"/></svg> Tripadvisor</span>
+          </p>
         </li>
         <li class="review">
-          <div class="review__stars" role="img" aria-label="Cinque stelle su cinque">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <blockquote class="review__quote">Il pranzo a 12 euro &egrave; imbattibile: primo, secondo, dolce, vino e caff&egrave;. Tutto genuino, servizio veloce e gentile.</blockquote>
-          <p class="review__meta"><cite>Giulia R.</cite><span class="review__src">Tripadvisor</span></p>
+          <div class="review__header">
+            <div class="review__stars" role="img" aria-label="Cinque stelle su cinque">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <cite class="review__name">Matteo O.</cite>
+          </div>
+          <blockquote class="review__quote">Sono stato pi&ugrave; di una volta in questo ristorante fuori dai circuiti turistici. Ogni volta &egrave; stata un'esperienza gastronomica eccezionale. Proposte sempre interessanti e di alto livello. Personale molto preparato e sempre gentile. Consigliatissimo.</blockquote>
+          <p class="review__foot">
+            <span class="review__detail">Roma, Italia &middot; 156 contributi</span>
+            <span class="review__src"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 32 32"><circle cx="10" cy="18" r="5" fill="none" stroke="#00aa6c" stroke-width="2"/><circle cx="22" cy="18" r="5" fill="none" stroke="#00aa6c" stroke-width="2"/><circle cx="10" cy="18" r="2" fill="#00aa6c"/><circle cx="22" cy="18" r="2" fill="#00aa6c"/><path d="M5 13c3-3 7-4 11-4s8 1 11 4" fill="none" stroke="#00aa6c" stroke-width="2" stroke-linecap="round"/><path d="M14 8l2-3 2 3" fill="#00aa6c"/></svg> Tripadvisor</span>
+          </p>
         </li>
         <li class="review">
-          <div class="review__stars" role="img" aria-label="Cinque stelle su cinque">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <blockquote class="review__quote">Posto autentico, accoglienza vera. Il coniglio con la polenta &egrave; da leccarsi i baffi. Una delle poche osterie rimaste cos&igrave;.</blockquote>
-          <p class="review__meta"><cite>Andrea T.</cite><span class="review__src">Google</span></p>
+          <div class="review__header">
+            <div class="review__stars" role="img" aria-label="Cinque stelle su cinque">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <cite class="review__name">Roberto</cite>
+          </div>
+          <blockquote class="review__quote">Vengo spesso in questo ristorante quando sono in Italia. Il men&ugrave; del pranzo &egrave; eccezionale: diverse scelte di primi e secondi. Ve lo consiglio vivamente.</blockquote>
+          <p class="review__foot">
+            <span class="review__detail">Local Guide &middot; 81 recensioni</span>
+            <span class="review__src"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 48 48"><path fill="#4285F4" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#34A853" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59A14.5 14.5 0 019.5 24c0-1.59.28-3.14.76-4.59l-7.98-6.19A23.99 23.99 0 000 24c0 3.77.9 7.34 2.44 10.51l8.09-5.92z"/><path fill="#EA4335" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-8.09 5.92C6.51 42.62 14.62 48 24 48z"/></svg> Google</span>
+          </p>
         </li>
       </ul>
     </div>
@@ -217,7 +264,7 @@
   <!-- CHIUSURA + CHIAMATA -->
   <section class="casa" id="chiama" aria-labelledby="casa-title">
     <div class="wrap wrap--narrow casa__inner">
-      <img class="casa__seal" src="asset/logo.jpg" alt="" width="96" height="96" />
+      <img class="casa__seal" src="asset/logo_main.png" alt="" width="96" height="96" />
       <h2 id="casa-title" class="casa__title">Vi aspettiamo a tavola</h2>
       <p class="casa__lead">Si consiglia la prenotazione.</p>
 
@@ -233,14 +280,34 @@
           <dd>Via del Borgo, 00<br />24100 Bergamo (BG)</dd>
         </div>
         <div class="casa__info-item">
-          <dt>A pranzo</dt>
-          <dd>Luned&igrave; &ndash; Sabato<br />12:00&ndash;14:30</dd>
+          <dt>Orari estivi <small>(giu&ndash;ago)</small></dt>
+          <dd>Men&ugrave; lavoro<br />Luned&igrave; &ndash; Sabato a pranzo</dd>
         </div>
         <div class="casa__info-item">
-          <dt>A cena</dt>
-          <dd>Su prenotazione<br />chiamateci</dd>
+          <dt>Orari invernali <small>(set&ndash;mag)</small></dt>
+          <dd>Men&ugrave; fisso: Lun&ndash;Sab a pranzo<br />Alla carta: Ven e Sab sera, Dom a pranzo</dd>
         </div>
       </dl>
+      <p class="casa__orari-note">Consultare gli <a href="https://www.google.com/maps/place/Antichi+Sapori" target="_blank" rel="noopener">orari aggiornati su Google</a></p>
+
+      <div class="casa__social">
+        <a class="casa__social-link" href="https://www.google.com/maps/dir//Antichi+Sapori+Bergamo" target="_blank" rel="noopener" aria-label="Come raggiungerci">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Come raggiungerci</span>
+        </a>
+        <a class="casa__social-link" href="mailto:info@antichisapori.it" aria-label="Scrivici una mail">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,7 12,13 2,7"/></svg>
+          <span>Scrivici</span>
+        </a>
+        <a class="casa__social-link" href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Seguici su Facebook">
+          <svg width="24" height="24" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="#1877F2"/><path fill="#fff" d="M22 11h-3c-.5 0-1 .5-1 1v3h4l-.5 4H18v9h-4v-9h-3v-4h3v-3.5C14 8.5 16.5 6 19.5 6H22v5z"/></svg>
+          <span>Facebook</span>
+        </a>
+        <a class="casa__social-link" href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Seguici su Instagram">
+          <svg width="24" height="24" viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="ig-grad" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" stop-color="#FFDC80"/><stop offset="25%" stop-color="#F56040"/><stop offset="50%" stop-color="#C13584"/><stop offset="75%" stop-color="#833AB4"/><stop offset="100%" stop-color="#405DE6"/></linearGradient></defs><rect width="32" height="32" rx="8" fill="url(#ig-grad)"/><rect x="7" y="7" width="18" height="18" rx="5" fill="none" stroke="#fff" stroke-width="2"/><circle cx="16" cy="16" r="4.5" fill="none" stroke="#fff" stroke-width="2"/><circle cx="22" cy="10" r="1.5" fill="#fff"/></svg>
+          <span>Instagram</span>
+        </a>
+      </div>
     </div>
   </section>
 </main>
@@ -248,7 +315,7 @@
 <footer class="foot">
   <div class="wrap foot__inner">
     <div class="foot__brand">
-      <img src="asset/logo.jpg" alt="" width="44" height="44" />
+      <img src="asset/logo_main.png" alt="" width="44" height="44" />
       <span>
         <strong>Antichi Sapori</strong>
         <em>Trattoria tipica bergamasca</em>
